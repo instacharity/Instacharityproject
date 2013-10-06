@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="User_Registration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firstname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User_RegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_RegistrationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User_Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User_LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Organization_Registration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Organization_RegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Organization_RegistrationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Organization_Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Organization_LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Organization_LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="User_RegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:User_Registration" />
+  </wsdl:message>
+  <wsdl:message name="User_RegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:User_RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="User_LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:User_Login" />
+  </wsdl:message>
+  <wsdl:message name="User_LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:User_LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Organization_RegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:Organization_Registration" />
+  </wsdl:message>
+  <wsdl:message name="Organization_RegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:Organization_RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Organization_LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Organization_Login" />
+  </wsdl:message>
+  <wsdl:message name="Organization_LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:Organization_LoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebserviceSoap">
+    <wsdl:operation name="User_Registration">
+      <wsdl:input message="tns:User_RegistrationSoapIn" />
+      <wsdl:output message="tns:User_RegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="User_Login">
+      <wsdl:input message="tns:User_LoginSoapIn" />
+      <wsdl:output message="tns:User_LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Organization_Registration">
+      <wsdl:input message="tns:Organization_RegistrationSoapIn" />
+      <wsdl:output message="tns:Organization_RegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Organization_Login">
+      <wsdl:input message="tns:Organization_LoginSoapIn" />
+      <wsdl:output message="tns:Organization_LoginSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebserviceSoap" type="tns:WebserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="User_Registration">
+      <soap:operation soapAction="http://tempuri.org/User_Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="User_Login">
+      <soap:operation soapAction="http://tempuri.org/User_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Organization_Registration">
+      <soap:operation soapAction="http://tempuri.org/Organization_Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Organization_Login">
+      <soap:operation soapAction="http://tempuri.org/Organization_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebserviceSoap12" type="tns:WebserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="User_Registration">
+      <soap12:operation soapAction="http://tempuri.org/User_Registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="User_Login">
+      <soap12:operation soapAction="http://tempuri.org/User_Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Organization_Registration">
+      <soap12:operation soapAction="http://tempuri.org/Organization_Registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Organization_Login">
+      <soap12:operation soapAction="http://tempuri.org/Organization_Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Webservice">
+    <wsdl:port name="WebserviceSoap" binding="tns:WebserviceSoap">
+      <soap:address location="http://vhost1135.site1.compute.ihost.com/aspnet_client/Registration%20updated/Webservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebserviceSoap12" binding="tns:WebserviceSoap12">
+      <soap12:address location="http://vhost1135.site1.compute.ihost.com/aspnet_client/Registration%20updated/Webservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
