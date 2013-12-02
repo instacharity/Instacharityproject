@@ -1,0 +1,11 @@
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\SRChat.dll
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\SRChat.pdb
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\Newtonsoft.Json.dll
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\SignalR.dll
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\SignalR.Hosting.AspNet.dll
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\SignalR.Hosting.Common.dll
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\obj\Debug\SRChat.csprojResolveAssemblyReference.cache
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\obj\Debug\SRChat.dll
+C:\Users\Aditya Deshpande\Desktop\New folder (3)\New folder (3)\SRChat-master\obj\Debug\SRChat.pdb

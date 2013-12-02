@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LocateOrganizationZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocateOrganizationZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocateOrganizationZipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocateZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocateZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocateZipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocateCity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocateCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocateCityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocateState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocateStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocateStateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CountEventsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountOrganizations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountOrganizationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CountOrganizationsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DonorRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DonorRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DonorRegisterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DonorLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DonorLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DonorLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrganizationRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrganizationRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrganizationRegisterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrganizationLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrganizationLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrganizationLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreIpAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="latitude" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="longitude" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreIpAddressResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="email">
+        <s:complexType />
+      </s:element>
+      <s:element name="emailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImageUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imgbyte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="imagename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImageUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImageUploadResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JoinVolunteer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eventname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JoinVolunteerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JoinVolunteerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eventname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LocateOrganizationZipSoapIn">
+    <wsdl:part name="parameters" element="tns:LocateOrganizationZip" />
+  </wsdl:message>
+  <wsdl:message name="LocateOrganizationZipSoapOut">
+    <wsdl:part name="parameters" element="tns:LocateOrganizationZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="LocateZipSoapIn">
+    <wsdl:part name="parameters" element="tns:LocateZip" />
+  </wsdl:message>
+  <wsdl:message name="LocateZipSoapOut">
+    <wsdl:part name="parameters" element="tns:LocateZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="LocateCitySoapIn">
+    <wsdl:part name="parameters" element="tns:LocateCity" />
+  </wsdl:message>
+  <wsdl:message name="LocateCitySoapOut">
+    <wsdl:part name="parameters" element="tns:LocateCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="LocateStateSoapIn">
+    <wsdl:part name="parameters" element="tns:LocateState" />
+  </wsdl:message>
+  <wsdl:message name="LocateStateSoapOut">
+    <wsdl:part name="parameters" element="tns:LocateStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CountEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:CountEvents" />
+  </wsdl:message>
+  <wsdl:message name="CountEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:CountEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CountOrganizationsSoapIn">
+    <wsdl:part name="parameters" element="tns:CountOrganizations" />
+  </wsdl:message>
+  <wsdl:message name="CountOrganizationsSoapOut">
+    <wsdl:part name="parameters" element="tns:CountOrganizationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DonorRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:DonorRegister" />
+  </wsdl:message>
+  <wsdl:message name="DonorRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:DonorRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="DonorLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:DonorLogin" />
+  </wsdl:message>
+  <wsdl:message name="DonorLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:DonorLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrganizationRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:OrganizationRegister" />
+  </wsdl:message>
+  <wsdl:message name="OrganizationRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:OrganizationRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrganizationLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:OrganizationLogin" />
+  </wsdl:message>
+  <wsdl:message name="OrganizationLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:OrganizationLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreIpAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:StoreIpAddress" />
+  </wsdl:message>
+  <wsdl:message name="StoreIpAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:StoreIpAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="emailSoapIn">
+    <wsdl:part name="parameters" element="tns:email" />
+  </wsdl:message>
+  <wsdl:message name="emailSoapOut">
+    <wsdl:part name="parameters" element="tns:emailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImageUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:ImageUpload" />
+  </wsdl:message>
+  <wsdl:message name="ImageUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:ImageUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="JoinVolunteerSoapIn">
+    <wsdl:part name="parameters" element="tns:JoinVolunteer" />
+  </wsdl:message>
+  <wsdl:message name="JoinVolunteerSoapOut">
+    <wsdl:part name="parameters" element="tns:JoinVolunteerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LocatorSoap">
+    <wsdl:operation name="LocateOrganizationZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Locate Organization zip</wsdl:documentation>
+      <wsdl:input message="tns:LocateOrganizationZipSoapIn" />
+      <wsdl:output message="tns:LocateOrganizationZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Locate Event Zip</wsdl:documentation>
+      <wsdl:input message="tns:LocateZipSoapIn" />
+      <wsdl:output message="tns:LocateZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateCity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Locate City</wsdl:documentation>
+      <wsdl:input message="tns:LocateCitySoapIn" />
+      <wsdl:output message="tns:LocateCitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateState">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Locate State</wsdl:documentation>
+      <wsdl:input message="tns:LocateStateSoapIn" />
+      <wsdl:output message="tns:LocateStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CountEvents">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">counting Events</wsdl:documentation>
+      <wsdl:input message="tns:CountEventsSoapIn" />
+      <wsdl:output message="tns:CountEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CountOrganizations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">counting Organizations</wsdl:documentation>
+      <wsdl:input message="tns:CountOrganizationsSoapIn" />
+      <wsdl:output message="tns:CountOrganizationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DonorRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">DonorRegistration</wsdl:documentation>
+      <wsdl:input message="tns:DonorRegisterSoapIn" />
+      <wsdl:output message="tns:DonorRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DonorLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">DonorLogin</wsdl:documentation>
+      <wsdl:input message="tns:DonorLoginSoapIn" />
+      <wsdl:output message="tns:DonorLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">OrganizationRegistration</wsdl:documentation>
+      <wsdl:input message="tns:OrganizationRegisterSoapIn" />
+      <wsdl:output message="tns:OrganizationRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">OrganizationLogin</wsdl:documentation>
+      <wsdl:input message="tns:OrganizationLoginSoapIn" />
+      <wsdl:output message="tns:OrganizationLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreIpAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Storing IP Adddress</wsdl:documentation>
+      <wsdl:input message="tns:StoreIpAddressSoapIn" />
+      <wsdl:output message="tns:StoreIpAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="email">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send Email Notification</wsdl:documentation>
+      <wsdl:input message="tns:emailSoapIn" />
+      <wsdl:output message="tns:emailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImageUpload">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Image</wsdl:documentation>
+      <wsdl:input message="tns:ImageUploadSoapIn" />
+      <wsdl:output message="tns:ImageUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JoinVolunteer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Join Volunteer</wsdl:documentation>
+      <wsdl:input message="tns:JoinVolunteerSoapIn" />
+      <wsdl:output message="tns:JoinVolunteerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send Email Notification to Volunteers</wsdl:documentation>
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LocatorSoap" type="tns:LocatorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LocateOrganizationZip">
+      <soap:operation soapAction="http://tempuri.org/LocateOrganizationZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateZip">
+      <soap:operation soapAction="http://tempuri.org/LocateZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateCity">
+      <soap:operation soapAction="http://tempuri.org/LocateCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateState">
+      <soap:operation soapAction="http://tempuri.org/LocateState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountEvents">
+      <soap:operation soapAction="http://tempuri.org/CountEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountOrganizations">
+      <soap:operation soapAction="http://tempuri.org/CountOrganizations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonorRegister">
+      <soap:operation soapAction="http://tempuri.org/DonorRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonorLogin">
+      <soap:operation soapAction="http://tempuri.org/DonorLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationRegister">
+      <soap:operation soapAction="http://tempuri.org/OrganizationRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationLogin">
+      <soap:operation soapAction="http://tempuri.org/OrganizationLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreIpAddress">
+      <soap:operation soapAction="http://tempuri.org/StoreIpAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="email">
+      <soap:operation soapAction="http://tempuri.org/email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImageUpload">
+      <soap:operation soapAction="http://tempuri.org/ImageUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JoinVolunteer">
+      <soap:operation soapAction="http://tempuri.org/JoinVolunteer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LocatorSoap12" type="tns:LocatorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LocateOrganizationZip">
+      <soap12:operation soapAction="http://tempuri.org/LocateOrganizationZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateZip">
+      <soap12:operation soapAction="http://tempuri.org/LocateZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateCity">
+      <soap12:operation soapAction="http://tempuri.org/LocateCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateState">
+      <soap12:operation soapAction="http://tempuri.org/LocateState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountEvents">
+      <soap12:operation soapAction="http://tempuri.org/CountEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountOrganizations">
+      <soap12:operation soapAction="http://tempuri.org/CountOrganizations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonorRegister">
+      <soap12:operation soapAction="http://tempuri.org/DonorRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonorLogin">
+      <soap12:operation soapAction="http://tempuri.org/DonorLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationRegister">
+      <soap12:operation soapAction="http://tempuri.org/OrganizationRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrganizationLogin">
+      <soap12:operation soapAction="http://tempuri.org/OrganizationLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreIpAddress">
+      <soap12:operation soapAction="http://tempuri.org/StoreIpAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="email">
+      <soap12:operation soapAction="http://tempuri.org/email" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImageUpload">
+      <soap12:operation soapAction="http://tempuri.org/ImageUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JoinVolunteer">
+      <soap12:operation soapAction="http://tempuri.org/JoinVolunteer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Locator">
+    <wsdl:port name="LocatorSoap" binding="tns:LocatorSoap">
+      <soap:address location="http://localhost:59372/Locator/Locator.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LocatorSoap12" binding="tns:LocatorSoap12">
+      <soap12:address location="http://localhost:59372/Locator/Locator.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

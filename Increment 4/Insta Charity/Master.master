@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="donorhome" %>
+
+<!DOCTYPE html />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Insta Charity</title>
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+            $.mobile.ajaxEnabled = false;
+        });
+   </script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div class ="page" data-role="page">
+<div data-role= "header"  data-theme ="b">
+
+ <a href="#" data-rel="back">Back</a>
+             <h1> Insta Charity </h1>
+<a href="LogOut.aspx" data-role="button" >Logout</a>
+</div>
+
+    
+    <div data-role= "content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        
+        </asp:ContentPlaceHolder>
+    </div>
+ 
+    <div data-role ="footer" data-theme ="b">
+            <h4> @ UMKC ASE Project </h4></div>
+            
+</div>
+</body>
+</html>
